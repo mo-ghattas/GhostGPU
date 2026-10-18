@@ -28,7 +28,6 @@ For the full Grasshopper plug-in you need Windows x64, a .NET 8 or newer SDK, th
 From the repository root:
 
 ```powershell
-dotnet build GhostGPU.sln -c Release
 powershell -NoProfile -File scripts/Build.ps1 -SkipValidation
 ```
 
