@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>GhostGPU.Validation</RootNamespace>
+    <AssemblyName>GhostGPU.Validation</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GhostGPU.Core\GhostGPU.Core.csproj" />
+    <ProjectReference Include="..\GhostGPU.Runtime\GhostGPU.Runtime.csproj" />
+  </ItemGroup>
+</Project>

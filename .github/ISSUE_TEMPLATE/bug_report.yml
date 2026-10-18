@@ -1,0 +1,30 @@
+name: Bug report
+description: Report a reproducible component, runtime or geometry problem.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include steps and a small .gh definition or synthetic geometry fixture. Exclude private customer data.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual results
+      description: Include errors, topology or volume differences, and tolerance where applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: GhostGPU commit/version, Windows, Rhino version and runtime, GPU/driver, backend and data formats.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and comparison evidence
+      description: Include validation output or screenshots. For timing reports, state warm-up, transfers and the CPU reference.

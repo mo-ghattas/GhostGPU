@@ -1,0 +1,377 @@
+[
+  {
+    "Name": "box_box",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 6,
+          "Area": 564,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 35.999999999999986,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 5,
+          "Area": 156.0000000000001,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 5,
+          "Area": 156.0000000000001,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "box_sphere",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 6,
+          "Area": 552.8761078987877,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 47.123892101212306,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 2,
+          "Area": 75.39893614996592,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 125.66299357035464,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "box_cylinder_capped",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 3,
+      "Pieces": [
+        {
+          "FaceCount": 6,
+          "Area": 523.0309790372096,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 38.48451048139521,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 38.48451048139519,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 3,
+      "Pieces": [
+        {
+          "FaceCount": 2,
+          "Area": 104.45795620678089,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 2,
+          "Area": 104.45795620678092,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 219.9114857512855,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "steinmetz_cylinders",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 4,
+      "Pieces": [
+        {
+          "FaceCount": 2,
+          "Area": 856.6334223852732,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 2,
+          "Area": 856.6334223852732,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 400.0036429275444,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 2,
+          "Area": 400.00364292754364,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 4,
+      "Pieces": [
+        {
+          "FaceCount": 2,
+          "Area": 856.6334223852732,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 2,
+          "Area": 856.6334223852732,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 400.003642927544,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 400.0036429275442,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "sphere_sphere",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 251.32627201162126,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 2,
+          "Area": 62.83299332147607,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 251.32627201162109,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 62.83299332147583,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "two_freeform_surfaces",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 214.37987119826838,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 213.8005058765572,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 228.01721372912135,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 228.01721377989116,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "torus_plane",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 2,
+          "Area": 505.27580476526146,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 3,
+          "Area": 679.0767236020814,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 3,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 761.2141247741393,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 69.39293761293052,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 69.39293761293057,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "near_tangent_spheres",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 314.1278405832819,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 2,
+          "Area": 0.03142474516277123,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 314.12784058328174,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 0.03142474516288092,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "coincident_face_boxes",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 100,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 5,
+          "Area": 500,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 1,
+          "Area": 100,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 5,
+          "Area": 500,
+          "IsValid": true
+        }
+      ]
+    }
+  },
+  {
+    "Name": "cylinder_sphere",
+    "Tolerance": 0.001,
+    "SplitAByB": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 3,
+          "Area": 309.7310475450041,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 2,
+          "Area": 42.12733089766061,
+          "IsValid": true
+        }
+      ]
+    },
+    "SplitBByA": {
+      "PieceCount": 2,
+      "Pieces": [
+        {
+          "FaceCount": 2,
+          "Area": 74.75360505933563,
+          "IsValid": true
+        },
+        {
+          "FaceCount": 1,
+          "Area": 79.18443479463932,
+          "IsValid": true
+        }
+      ]
+    }
+  }
+]

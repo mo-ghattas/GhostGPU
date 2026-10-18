@@ -1,0 +1,23 @@
+name: Feature or contribution idea
+description: Propose a useful node, workflow or improvement.
+title: "[Idea] "
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow and problem
+      description: Describe who needs this and what currently limits the workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Include inputs/outputs, geometry requirements, expected scale and comparison with existing approaches.
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: How you can help
+      description: Code, fixtures, GPU measurements, documentation or examples are all useful.

@@ -1,0 +1,46 @@
+# Build and validation output
+**/bin/
+**/obj/
+artifacts/
+validation.results.json
+*_validation_results.json
+
+# Local IDE and user state
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.log
+*.tmp
+*.bak
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+
+# Private research/agent state and distributable archives
+.agents/
+.ltt*
+coordination/
+research/
+**/research/
+ExtractedSource/
+NativeSource/
+*.zip
+*.7z
+*.rar
+*.dll
+*.exe
+*.gha
+*.pdb
