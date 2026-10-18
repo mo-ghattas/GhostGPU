@@ -1,9 +1,7 @@
 using System;
 using GH_IO.Serialization;
-using Grasshopper;
 using Grasshopper.Kernel.Types;
 using GhostGPU.Core;
-using GhostGPU.Grasshopper.Session;
 
 namespace GhostGPU.Grasshopper.Parameters
 {
@@ -52,22 +50,9 @@ namespace GhostGPU.Grasshopper.Parameters
 
         public override IGH_Goo Duplicate()
         {
-            var retained = m_value?.Retain();
-            if (retained == null) return new GH_GpuBuffer((GpuBuffer)null);
-            var goo = new GH_GpuBuffer(retained);
-            try
-            {
-                var doc = Instances.ActiveCanvas?.Document;
-                if (doc != null)
-                {
-                    GpuSessionManager.RegisterTransientLease(doc, goo);
-                }
-            }
-            catch
-            {
-                // Headless or background canvas without UI
-            }
-            return goo;
+            // A duplicate can live in a downstream parameter cache across solutions.
+            // Its owner (or finalizer) releases this lease; SolutionEnd is too early.
+            return new GH_GpuBuffer(m_value?.Retain());
         }
 
         public override string ToString()

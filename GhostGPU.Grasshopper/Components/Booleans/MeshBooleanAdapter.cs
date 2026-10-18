@@ -20,7 +20,7 @@ namespace GhostGPU.Grasshopper.Components.Booleans
             var vertices = new V3[vCount];
             for (int i = 0; i < vCount; i++)
             {
-                var pt = cloned.Vertices[i];
+                var pt = cloned.Vertices.Point3dAt(i);
                 vertices[i] = new V3(pt.X, pt.Y, pt.Z);
             }
 

@@ -137,6 +137,8 @@ namespace GhostGPU.Validation
                 V2RuntimeTests.RunAll(session, RecordTest);
                 V2FormatAndConcurrencyTests.RunAll(session, RecordTest);
 
+                Phase1Tests.RunAll(session, RecordTest);
+
                 // 11. Bounded Benchmarks
                 if (runBenchmarks)
                 {

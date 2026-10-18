@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseAppHost>false</UseAppHost>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../GhostGPU.Runtime/GhostGPU.Runtime.csproj" />
+    <ProjectReference Include="../../GhostGPU.Booleans/GhostGPU.Booleans.csproj" />
+    <ProjectReference Include="../../GhostGPU.Kernel/GhostGPU.Kernel.csproj" />
+    <!-- Compile the same component sources in an isolated Rhino .NET 8 host. -->
+    <Compile Include="../../GhostGPU.Grasshopper/**/*.cs"
+             Exclude="../../GhostGPU.Grasshopper/obj/**;../../GhostGPU.Grasshopper/bin/**;../../GhostGPU.Grasshopper/Properties/**"
+             LinkBase="Components" />
+    <Reference Include="RhinoCommon"><HintPath>$(RhinoInstallDir)/System/RhinoCommon.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Eto"><HintPath>$(RhinoInstallDir)/System/Eto.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Grasshopper"><HintPath>$(RhinoInstallDir)/Plug-ins/Grasshopper/Grasshopper.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="GH_IO"><HintPath>$(RhinoInstallDir)/Plug-ins/Grasshopper/GH_IO.dll</HintPath><Private>true</Private></Reference>
+  </ItemGroup>
+</Project>

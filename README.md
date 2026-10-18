@@ -11,11 +11,13 @@ GhostGPU keeps point, vector, scalar and mesh data in reusable buffers between c
 | Area | Components and capabilities |
 | --- | --- |
 | Data | Upload points, vectors, numbers and meshes; explicit download |
-| Points and vectors | Closest point, distance, vector between points, unit vector, amplitude, move |
+| Points and vectors | Closest point, distance, XYZ/polar construction, coordinate extraction, vector algebra, projection, interpolation, axes and transforms |
 | Numbers | Arithmetic, bounds, remap, linear/smoothstep/sine maps, colour ramp |
-| Meshes | Vertex buffers, displacement, vertex colours, union/difference/intersection |
+| Meshes | Vertex buffers, displacement, colours, face/vertex analysis, fixed-topology transforms, union/difference/intersection |
 | Solids | Hybrid Brep union/difference/intersection; optional experimental GhostGPU kernel |
 | Diagnostics | Preview/readback, memory counters, session settings |
+
+The [phase-one pack](docs/PHASE1.md) adds 34 point/vector/mesh components and recolors corresponding installed native icons at runtime. Its coverage and deferred milestones are documented explicitly.
 
 The runtime has a device memory pool, pinned staging buffers, compact storage options, configurable host execution for small workloads, and spill-to-host support. Double precision is the default; compact float storage is opt-in.
 
@@ -31,7 +33,7 @@ From the repository root:
 powershell -NoProfile -File scripts/Build.ps1 -SkipValidation
 ```
 
-The second command stages the plug-in and dependency DLLs in `artifacts/GhostGPU-0.2.0`. It does not install them. A nonstandard Rhino installation can be selected with `-RhinoInstallDir 'D:\Rhino 8'` on the build script.
+The command stages the plug-in and dependency DLLs in `artifacts/GhostGPU-0.2.0`. It does not install them. A nonstandard Rhino installation can be selected with `-RhinoInstallDir 'D:\Rhino 8'` on the build script.
 
 To run validation while packaging, omit `-SkipValidation`. The default checks both CPU debug and CUDA. Use `-ValidationBackend cpu` for a machine without CUDA. CPU debug is explicitly labelled and does not establish GPU performance.
 

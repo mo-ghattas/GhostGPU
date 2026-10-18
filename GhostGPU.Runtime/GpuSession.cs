@@ -20,7 +20,7 @@ namespace GhostGPU.Runtime
     /// Operates on resident immutable device and host buffers with ref-counted lease semantics,
     /// power-of-two size-class memory pooling, pinned staging ring transfers, and compact datatypes.
     /// </summary>
-    public sealed class GpuSession : IGpuSession
+    public sealed partial class GpuSession : IGpuSession
     {
         private readonly SessionOptions _options;
         private readonly Context _context;

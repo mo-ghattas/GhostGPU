@@ -14,6 +14,6 @@ namespace GhostGPU.Grasshopper.Parameters
 
         public override GH_Exposure Exposure => GH_Exposure.primary;
 
-        protected override System.Drawing.Bitmap Icon => null;
+        protected override System.Drawing.Bitmap Icon => Icons.GhostGpuIconProvider.GetFallbackIcon("BUF");
     }
 }

@@ -165,6 +165,6 @@ namespace GhostGPU.Grasshopper.Components
 
         protected abstract void Solve(IGH_DataAccess DA);
 
-        protected override System.Drawing.Bitmap Icon => null;
+        protected override System.Drawing.Bitmap Icon => Icons.GhostGpuIconProvider.GetIcon(this);
     }
 }

@@ -1,18 +1,18 @@
 # Known issues
 
-These findings were reproduced during the 18 October 2026 development review. This public preparation preserves the algorithms and exposes the issues for focused fixes; cleanup is not a correctness release.
+These findings were reproduced during the 18 October 2026 development review. The phase-one expansion fixes K1 and K2 below; the other findings remain open.
 
-## K1: Cached duplicated GPU handles can expire too early
+## K1: Cached duplicated GPU handles can expire too early — fixed in v0.2.0
 
 **Priority: high.** `GH_GpuBuffer.Duplicate` registers retained Goo for unconditional disposal at the active document's `SolutionEnd`. A duplicated handle can still be held in cached Grasshopper parameter data after that event. A probe confirmed the cached duplicate becomes invalid while the original remains valid. Document selection also depends on the active canvas.
 
-Fix direction: attach lease ownership to the actual consumer/cache lifetime. Add a partial-recompute regression case.
+`Duplicate` now gives the duplicate its own retained lease without registering it for disposal on the active canvas's `SolutionEnd`. The owning Goo releases it on disposal/finalization. The isolated Rhino validation exercises the cached duplicate and repeated partial recomputes.
 
-## K2: Mesh Boolean adapters can round double vertices to floats
+## K2: Mesh Boolean adapters can round double vertices to floats — fixed in v0.2.0
 
 **Priority: high.** `MeshBooleanAdapter.ToTriMesh` uses the `MeshVertexList` indexer, which returns `Point3f`. A double-precision mesh with X values 100000000 and 100000001 became zero-width through an adapter round trip.
 
-Fix direction: use `Point3dAt(i)` and test distant coordinates and chained Booleans.
+The adapter now reads `Point3dAt(i)`. A regression in the Rhino host checks a triangle at X = 100000000 with one-unit separation and its round trip. This fixes the adapter defect; it is not a claim of arbitrary chained Boolean correctness.
 
 ## K3: Device lease adoption needs stronger ownership checks
 

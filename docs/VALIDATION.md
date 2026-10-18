@@ -35,6 +35,20 @@ The five JSON files in `tests/fixtures/golden/` store NURBS geometry, evaluated 
 
 The 18 October 2026 review of the development snapshot recorded 77/77 runtime checks and 69/69 mesh Boolean checks on both CpuDebug and an RTX 3050 Ti Laptop GPU. Its kernel harness reported 38 passed and 10 M3 cases not run. Isolated Rhino checks passed 21/21 hybrid and 21/21 kernel cases without fallbacks. These are bounded fixture results, not proof of arbitrary solid-operation correctness. Known defects are listed in [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 
+## Phase-one component and icon checks
+
+The runtime suite also checks the expanded point/vector/mesh operations, resident transform parameters and mesh topology validation. Mesh validation reads back a four-byte control flag for device index/CSR checks; geometry stays resident until an explicit download.
+
+On Windows with an installed, licensed Rhino 8:
+
+```powershell
+powershell -NoProfile -File scripts/TestHost.ps1 -Backend both
+```
+
+Use `-Backend cpu` when CUDA is unavailable. Add `-WriteExample` to regenerate `examples/GhostGPU-Phase1.gh`. The runner builds the component sources in a separate .NET 8 process, starts an invisible RhinoCore, and checks GUIDs, ports, exact native icon alpha masks, CPU/native numerical parity, tree paths, mesh topology and 100 partial recomputes per backend. It writes an icon contact sheet and component inventory under `artifacts/phase1`. The regular plug-in still targets .NET Framework 4.8 and is built separately by the solution build.
+
+This does not install into a Rhino profile or change an existing document. The small example proves component behavior and matching, not a speedup benchmark. Standalone CI does not execute this Rhino-dependent project.
+
 ## CI scope
 
 GitHub Actions runs the standalone validation programs on Windows with CPU debug. It does not have Rhino or an NVIDIA GPU. Its kernel result must be read alongside the explicit missing-coverage counts. CUDA runs, full plug-in builds and live Grasshopper integration are maintainer/contributor checks.

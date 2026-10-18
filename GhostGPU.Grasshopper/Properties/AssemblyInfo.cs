@@ -11,6 +11,9 @@ using Grasshopper.Kernel;
 [assembly: AssemblyCopyright("Copyright © 2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: AssemblyVersion("0.2.0.0")]
+[assembly: AssemblyFileVersion("0.2.0.0")]
+[assembly: AssemblyInformationalVersion("0.2.0")]
 [assembly: ComVisible(false)]
 [assembly: Guid("4C519965-FDE5-46D3-BC30-A21FE8AE5167")]
 
